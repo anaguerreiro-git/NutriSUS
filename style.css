@@ -1,0 +1,531 @@
+/*cores do sistema*/
+:root {
+    --d: #0b5d3b;
+    --m: #2e7d32;
+    --l: #43a047;
+    --c: #e8f5e9;
+    --t: #1b2b22;
+    --b: #cfe3d4
+}
+
+* {
+    box-sizing: border-box
+}
+/*reset e fontes*/
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #fff;
+    color: var(--t)
+}
+
+[hidden] {
+    display: none !important
+}
+/*logo*/
+
+.logo {
+    width: 220px;
+    display: block;
+    margin: 0 auto 8px
+}
+
+.logo.sm {
+    width: 150px;
+    margin: 0 0 16px
+}
+
+#login {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 16px
+}
+
+.box {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--b);
+    border-radius: 14px;
+    padding: 24px
+}
+/*abas paciente e nutricionista*/
+
+.tabs {
+    display: flex;
+    gap: 6px;
+    margin: 12px 0
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--b);
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--d)
+}
+
+.tabs button.on {
+    background: var(--d);
+    color: #fff
+}
+/*formularios*/
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: var(--d)
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid var(--b);
+    border-radius: 8px;
+    font: inherit
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible {
+    outline: 2px solid var(--l);
+    outline-offset: 1px
+}
+
+.btn {
+    background: var(--l);
+    color: #fff;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.btn:hover {
+    background: var(--m)
+}
+
+#loginForm .btn {
+    width: 100%;
+    margin-top: 6px
+}
+
+.link {
+    background: none;
+    border: 0;
+    color: var(--m);
+    cursor: pointer;
+    text-decoration: underline;
+    font: inherit;
+    padding: 8px 0
+}
+
+.erro {
+    color: #b3261e;
+    font-size: 13px;
+    min-height: 16px;
+    margin: 0
+}
+/*dados de teste*/
+
+.dica {
+    font-size: 12px;
+    color: #555;
+    text-align: center
+}
+
+#app {
+    display: flex;
+    min-height: 100vh
+}
+/*menu lateral*/
+
+aside {
+    width: 230px;
+    background: var(--c);
+    border-right: 1px solid var(--b);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1
+}
+
+#menu button {
+    text-align: left;
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+    color: var(--d)
+}
+
+#menu button:hover {
+    background: #d3ebd6
+}
+
+#menu button.on {
+    background: var(--d);
+    color: #fff
+}
+
+.sair {
+    text-align: left
+}
+
+main {
+    flex: 1;
+    padding: 24px;
+    min-width: 0
+}
+/*header e títulos*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--l);
+    padding-bottom: 10px;
+    margin-bottom: 20px
+}
+
+h1 {
+    margin: 0;
+    color: var(--d);
+    font-size: 24px
+}
+
+h2 {
+    color: var(--d);
+    font-size: 18px;
+    margin: 0 0 8px
+}
+/*cards e listas*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 14px
+}
+
+.card {
+    border: 1px solid var(--b);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 14px
+}
+
+.card.g {
+    background: var(--c)
+}
+
+.big {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--d)
+}
+
+.item {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--c);
+    font-size: 14px
+}
+
+.item:last-child {
+    border: 0
+}
+
+.item small {
+    color: #5a6b60;
+    display: block
+}
+
+.vazio {
+    color: #6b7c71;
+    font-style: italic
+}
+/*tabelas*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid var(--c);
+    vertical-align: top
+}
+
+th {
+    color: var(--d)
+}
+
+.tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600
+}
+
+.ok {
+    background: var(--c);
+    color: var(--d)
+}
+
+.sim {
+    background: #fff3cd;
+    color: #7a5b00
+}
+
+.nao {
+    background: #fde0de;
+    color: #8a1c14
+}
+/*mensagens*/
+
+.chat {
+    max-height: 320px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px
+}
+
+.msg {
+    max-width: 75%;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: var(--c);
+    font-size: 14px
+}
+
+.msg.eu {
+    align-self: flex-end;
+    background: var(--l);
+    color: #fff
+}
+
+.row {
+    display: flex;
+    gap: 8px
+}
+
+.row input {
+    margin: 0
+}
+/*teleconsulta*/
+
+.sala {
+    background: var(--d);
+    color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center
+}
+
+#toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--d);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: .3s;
+    pointer-events: none
+}
+
+#toast.show {
+    opacity: 1
+}
+/*modo responsivo*/
+
+@media(max-width:700px) {
+    #app {
+        flex-direction: column
+    }
+
+    aside {
+        width: 100%
+    }
+
+    #menu {
+        flex-direction: row;
+        flex-wrap: wrap
+    }
+
+    main {
+        padding: 14px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    * {
+        transition: none !important
+    }
+}
+/*simulação gov.br*/
+
+.btn.gov {
+    width: 100%;
+    margin-top: 4px;
+    background: #fff;
+    color: #1351b4;
+    border: 2px solid #1351b4
+}
+
+.btn.gov:hover {
+    background: #1351b4;
+    color: #fff
+}
+
+#gov {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    overflow: auto;
+    z-index: 20
+}
+
+.govtop {
+    height: 56px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding: 0 24px
+}
+
+.govlogo {
+    font-size: 28px;
+    letter-spacing: -1px
+}
+
+.govlogo.big {
+    font-size: 64px
+}
+
+.govwrap {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 16px;
+    flex-wrap: wrap
+}
+
+.govimg {
+    flex: 1 1 380px;
+    min-height: 420px;
+    background: linear-gradient(90deg, #ffc700 0 30%, #f2f2f2 30%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 38%
+}
+
+.govimg p {
+    font-size: 20px;
+    max-width: 300px;
+    margin: 8px 0 0
+}
+
+.govimg mark {
+    background: #ffcd07;
+    font-weight: 700
+}
+
+.govform {
+    flex: 1 1 340px;
+    max-width: 420px;
+    padding: 20px;
+    box-shadow: 0 1px 6px #0002
+}
+
+.govform h2 {
+    color: #222;
+    font-size: 20px
+}
+
+.govform h3 {
+    font-size: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    margin-top: 26px;
+    color: #222;
+    font-weight: 500
+}
+
+.govcpf {
+    font-size: 16px;
+    margin: 16px 0 4px
+}
+
+.govform label {
+    color: #222;
+    font-weight: 500
+}
+
+.govform input:focus {
+    background: #fffbd0
+}
+
+.govcont {
+    display: block;
+    margin: 16px 0 0 auto;
+    background: #1351b4;
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    padding: 12px 34px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.govopt {
+    display: block;
+    background: none;
+    border: 0;
+    color: #168821;
+    font: inherit;
+    padding: 8px 0;
+    cursor: pointer;
+    text-align: left
+}
+
+.govopt:hover {
+    text-decoration: underline
+}
+/*aviso de simulação*/
+
+.govaviso {
+    font-size: 12px;
+    color: #666;
+    margin-top: 18px
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NutriSUS – Protótipo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <section id="login">
+    <div class="box">
+      <img src="logo.png" alt="NutriSUS" class="logo">
+      <div class="tabs" id="roleTabs">
+        <button class="on" data-r="paciente">Paciente</button>
+        <button data-r="nutricionista">Nutricionista</button>
+      </div>
+
+      <form id="loginForm">
+        <label>Nome <input id="fNome" placeholder="Seu nome"></label>
+        <label>E-mail <input id="fEmail" type="email" required></label>
+        <label>Senha <input id="fSenha" type="password" required></label>
+        <p id="erro" class="erro"></p>
+        <button class="btn" id="enviar">Entrar</button>
+        <button type="button" class="link" id="alterna">Não tem conta? Cadastre-se</button>
+      </form>
+
+      <button type="button" class="btn gov" id="govBtn">Entrar com a conta gov.br</button>
+      <p class="dica">Dados de teste: <b id="dica"></b></p>
+    </div>
+  </section>
+
+  <section id="app" hidden>
+    <aside><img src="logo.png" alt="NutriSUS" class="logo sm">
+      <nav id="menu"></nav><button class="link sair" id="sair">Sair</button>
+    </aside>
+
+    <main>
+      <header>
+        <h1 id="titulo"></h1><span id="quem"></span>
+      </header>
+      <div id="tela"></div>
+    </main>
+  </section>
+
+  <section id="gov" hidden>
+    <div class="govtop"><span class="govlogo"><b style="color:#1351b4">gov</b><b style="color:#ffcd07">.</b><b
+          style="color:#168821">br</b></span></div>
+    <div class="govwrap">
+      <div class="govimg"><span class="govlogo big"><b style="color:#1351b4">gov</b><b style="color:#ffcd07">.</b><b
+            style="color:#168821">br</b></span>
+        <p>Uma <mark>conta gov.br</mark> garante a identificação de cada cidadão que acessa os serviços digitais
+          públicos.</p>
+      </div>
+
+      <div class="govform">
+        <h2>Identifique-se no gov.br com:</h2>
+        <p class="govcpf">Número do CPF</p>
+
+        <small>Digite seu CPF para criar ou acessar sua conta gov.br</small>
+        <label>CPF <input id="govCpf" inputmode="numeric" placeholder="Digite seu CPF"></label>
+        <button type="button" class="govcont" data-gov>Continuar</button>
+        
+        <h3>Outras opções de identificação:</h3>
+        <button type="button" class="govopt" data-gov>Login com seu banco</button>
+        <button type="button" class="govopt" data-gov>Login com QR code</button>
+        <button type="button" class="govopt" data-gov>Seu certificado digital</button>
+        <p class="govaviso">Tela de simulação do protótipo, não é o gov.br real. Não digite CPF real; basta clicar para
+          entrar.</p>
+        <button type="button" class="link" id="govVolta">Voltar ao NutriSUS</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>
